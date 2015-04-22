@@ -10,7 +10,7 @@
 
 @interface GlobalManager()
 
-#if CASEB
+#if SOLUTION_DESIGN
 @property (nonatomic, strong) NSMutableArray *delegates;
 #endif
 
@@ -33,7 +33,7 @@
 - (instancetype)init
 {
     if (self = [super init]) {
-#if CASEB
+#if SOLUTION_DESIGN
         _delegates = [[NSMutableArray alloc] init];
 #endif
     }
@@ -42,17 +42,19 @@
 
 - (void)dealloc
 {
+#if SOLUTION_DESIGN
     [_delegates removeAllObjects];
+#endif
 }
 
 #pragma mark - Public
 
 - (void)doSomeStuff
 {
-#if CASEA
+#if CRAZY_DESIGN
     if (self.delegate)
         [self.delegate onGlobalManagerCallback:self];
-#elif CASEB
+#elif SOLUTION_DESIGN
     for (id<GlobalManagerDelegate> delegate in self.delegates) {
         if (delegate)
             [delegate onGlobalManagerCallback:self];
@@ -61,7 +63,7 @@
 }
 
 
-#if CASEB
+#if SOLUTION_DESIGN
 
 - (void)addDelegate:(id<GlobalManagerDelegate>)newDelegate
 {

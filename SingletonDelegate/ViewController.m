@@ -28,7 +28,7 @@
     self.bModel = [ModelB new];
     
     
-#if CASEA
+#if CRAZY_DESIGN
     /* For [GlobalManager sharedInstance], this could be happened in many routes in app!
      *  you (the caller) shouldn't have the responsibility of maintain the delegate of the
      *  singleton object!
@@ -36,8 +36,8 @@
      * THIS IS A CRAZY DESIGN!
      */
     [GlobalManager sharedInstance].delegate = self.aModel;
-    //[GlobalManager sharedInstance].delegate = self.bModel;
-#elif CASEB
+    [GlobalManager sharedInstance].delegate = self.bModel;
+#elif SOLUTION_DESIGN
     [[GlobalManager sharedInstance] addDelegate:self.aModel];
     [[GlobalManager sharedInstance] addDelegate:self.bModel];
 #endif
@@ -48,9 +48,9 @@
 
 - (void)dealloc
 {
-#if CASEA
+#if CRAZY_DESIGN
     [GlobalManager sharedInstance].delegate = nil;
-#elif CASEB
+#elif SOLUTION_DESIGN
     [[GlobalManager sharedInstance] removeDelegate:self.aModel];
     [[GlobalManager sharedInstance] removeDelegate:self.bModel];
 #endif

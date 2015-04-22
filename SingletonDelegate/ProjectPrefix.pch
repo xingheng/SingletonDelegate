@@ -10,9 +10,9 @@
 #define SingletonDelegate_ProjectPrefix_pch
 
 #if 0
-    #define CASEA   1
+    #define CRAZY_DESIGN   1
 #else
-    #define CASEB   1
+    #define SOLUTION_DESIGN   1
 #endif
 
 #endif

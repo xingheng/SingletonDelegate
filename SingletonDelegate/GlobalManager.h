@@ -20,7 +20,7 @@
 
 @interface GlobalManager : NSObject
 
-#if CASEA
+#if CRAZY_DESIGN
 @property (nonatomic, weak) id<GlobalManagerDelegate> delegate;
 #endif
 
@@ -28,7 +28,7 @@
 
 - (void)doSomeStuff;
 
-#if CASEB
+#if SOLUTION_DESIGN
 - (void)addDelegate:(id<GlobalManagerDelegate>)newDelegate;
 - (void)removeDelegate:(id<GlobalManagerDelegate>)deleteDelegate;
 #endif
