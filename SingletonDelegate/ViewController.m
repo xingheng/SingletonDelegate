@@ -30,10 +30,10 @@
     
 #if CRAZY_DESIGN
     /* For [GlobalManager sharedInstance], this could be happened in many routes in app!
-     *  you (the caller) shouldn't have the responsibility of maintain the delegate of the
-     *  singleton object!
+     *  you (the caller) shouldn't have the responsibility of maintaining the delegate of
+     *  the singleton object!
      *
-     * THIS IS A CRAZY DESIGN!
+     * --------------------- THIS IS A CRAZY DESIGN! ---------------------
      */
     [GlobalManager sharedInstance].delegate = self.aModel;
     [GlobalManager sharedInstance].delegate = self.bModel;
