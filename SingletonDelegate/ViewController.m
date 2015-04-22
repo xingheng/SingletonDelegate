@@ -27,17 +27,19 @@
     self.aModel = [ModelA new];
     self.bModel = [ModelB new];
     
+    
+#if CASEA
     /* For [GlobalManager sharedInstance], this could be happened in many routes in app!
      *  you (the caller) shouldn't have the responsibility of maintain the delegate of the
      *  singleton object!
      *
      * THIS IS A CRAZY DESIGN!
      */
-    
-#if CASEA
     [GlobalManager sharedInstance].delegate = self.aModel;
     //[GlobalManager sharedInstance].delegate = self.bModel;
-#else
+#elif CASEB
+    [[GlobalManager sharedInstance] addDelegate:self.aModel];
+    [[GlobalManager sharedInstance] addDelegate:self.bModel];
 #endif
     
     // trigger the test entry
@@ -48,7 +50,9 @@
 {
 #if CASEA
     [GlobalManager sharedInstance].delegate = nil;
-#else
+#elif CASEB
+    [[GlobalManager sharedInstance] removeDelegate:self.aModel];
+    [[GlobalManager sharedInstance] removeDelegate:self.bModel];
 #endif
 }
 

@@ -9,7 +9,7 @@
 #ifndef SingletonDelegate_ProjectPrefix_pch
 #define SingletonDelegate_ProjectPrefix_pch
 
-#if 1
+#if 0
     #define CASEA   1
 #else
     #define CASEB   1

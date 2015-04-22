@@ -22,11 +22,15 @@
 
 #if CASEA
 @property (nonatomic, weak) id<GlobalManagerDelegate> delegate;
-#else
 #endif
 
 + (GlobalManager *)sharedInstance;
 
 - (void)doSomeStuff;
+
+#if CASEB
+- (void)addDelegate:(id<GlobalManagerDelegate>)newDelegate;
+- (void)removeDelegate:(id<GlobalManagerDelegate>)deleteDelegate;
+#endif
 
 @end
