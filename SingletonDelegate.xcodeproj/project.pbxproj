@@ -14,6 +14,9 @@
 		68D4CD841AE7438E00F4CACF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68D4CD831AE7438E00F4CACF /* Images.xcassets */; };
 		68D4CD871AE7438E00F4CACF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68D4CD851AE7438E00F4CACF /* LaunchScreen.xib */; };
 		68D4CD931AE7439000F4CACF /* SingletonDelegateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 68D4CD921AE7439000F4CACF /* SingletonDelegateTests.m */; };
+		68D4CD9F1AE743F800F4CACF /* GlobalManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 68D4CD9E1AE743F800F4CACF /* GlobalManager.m */; };
+		68D4CDA21AE7462600F4CACF /* ModelA.m in Sources */ = {isa = PBXBuildFile; fileRef = 68D4CDA11AE7462600F4CACF /* ModelA.m */; };
+		68D4CDA51AE7475E00F4CACF /* ModelB.m in Sources */ = {isa = PBXBuildFile; fileRef = 68D4CDA41AE7475E00F4CACF /* ModelB.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,13 @@
 		68D4CD8C1AE7438E00F4CACF /* SingletonDelegateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SingletonDelegateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		68D4CD911AE7438F00F4CACF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		68D4CD921AE7439000F4CACF /* SingletonDelegateTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SingletonDelegateTests.m; sourceTree = "<group>"; };
+		68D4CD9D1AE743F800F4CACF /* GlobalManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalManager.h; sourceTree = "<group>"; };
+		68D4CD9E1AE743F800F4CACF /* GlobalManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlobalManager.m; sourceTree = "<group>"; };
+		68D4CDA01AE7462600F4CACF /* ModelA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelA.h; sourceTree = "<group>"; };
+		68D4CDA11AE7462600F4CACF /* ModelA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelA.m; sourceTree = "<group>"; };
+		68D4CDA31AE7475E00F4CACF /* ModelB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelB.h; sourceTree = "<group>"; };
+		68D4CDA41AE7475E00F4CACF /* ModelB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelB.m; sourceTree = "<group>"; };
+		68D4CDA61AE74C6E00F4CACF /* ProjectPrefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProjectPrefix.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +95,7 @@
 				68D4CD7B1AE7438E00F4CACF /* AppDelegate.m */,
 				68D4CD7D1AE7438E00F4CACF /* ViewController.h */,
 				68D4CD7E1AE7438E00F4CACF /* ViewController.m */,
+				68D4CD9C1AE743AE00F4CACF /* Classes */,
 				68D4CD801AE7438E00F4CACF /* Main.storyboard */,
 				68D4CD831AE7438E00F4CACF /* Images.xcassets */,
 				68D4CD851AE7438E00F4CACF /* LaunchScreen.xib */,
@@ -98,6 +109,7 @@
 			children = (
 				68D4CD771AE7438E00F4CACF /* Info.plist */,
 				68D4CD781AE7438E00F4CACF /* main.m */,
+				68D4CDA61AE74C6E00F4CACF /* ProjectPrefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -117,6 +129,19 @@
 				68D4CD911AE7438F00F4CACF /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		68D4CD9C1AE743AE00F4CACF /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				68D4CD9D1AE743F800F4CACF /* GlobalManager.h */,
+				68D4CD9E1AE743F800F4CACF /* GlobalManager.m */,
+				68D4CDA01AE7462600F4CACF /* ModelA.h */,
+				68D4CDA11AE7462600F4CACF /* ModelA.m */,
+				68D4CDA31AE7475E00F4CACF /* ModelB.h */,
+				68D4CDA41AE7475E00F4CACF /* ModelB.m */,
+			);
+			name = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,7 +246,10 @@
 			files = (
 				68D4CD7F1AE7438E00F4CACF /* ViewController.m in Sources */,
 				68D4CD7C1AE7438E00F4CACF /* AppDelegate.m in Sources */,
+				68D4CDA51AE7475E00F4CACF /* ModelB.m in Sources */,
+				68D4CD9F1AE743F800F4CACF /* GlobalManager.m in Sources */,
 				68D4CD791AE7438E00F4CACF /* main.m in Sources */,
+				68D4CDA21AE7462600F4CACF /* ModelA.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +314,8 @@
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = $SRCROOT/$PROJECT_NAME/ProjectPrefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -327,6 +357,8 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = $SRCROOT/$PROJECT_NAME/ProjectPrefix.pch;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;

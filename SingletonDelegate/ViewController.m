@@ -7,8 +7,15 @@
 //
 
 #import "ViewController.h"
+#import "GlobalManager.h"
+#import "ModelA.h"
+#import "ModelB.h"
+
 
 @interface ViewController ()
+
+@property (nonatomic, strong) ModelA *aModel;
+@property (nonatomic, strong) ModelB *bModel;
 
 @end
 
@@ -16,7 +23,33 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    self.aModel = [ModelA new];
+    self.bModel = [ModelB new];
+    
+    /* For [GlobalManager sharedInstance], this could be happened in many routes in app!
+     *  you (the caller) shouldn't have the responsibility of maintain the delegate of the
+     *  singleton object!
+     *
+     * THIS IS A CRAZY DESIGN!
+     */
+    
+#if CASEA
+    [GlobalManager sharedInstance].delegate = self.aModel;
+    //[GlobalManager sharedInstance].delegate = self.bModel;
+#else
+#endif
+    
+    // trigger the test entry
+    [[GlobalManager sharedInstance] doSomeStuff];
+}
+
+- (void)dealloc
+{
+#if CASEA
+    [GlobalManager sharedInstance].delegate = nil;
+#else
+#endif
 }
 
 - (void)didReceiveMemoryWarning {
