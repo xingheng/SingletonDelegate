@@ -50,7 +50,7 @@
 		68D4CDA31AE7475E00F4CACF /* ModelB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelB.h; sourceTree = "<group>"; };
 		68D4CDA41AE7475E00F4CACF /* ModelB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelB.m; sourceTree = "<group>"; };
 		68D4CDA61AE74C6E00F4CACF /* ProjectPrefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProjectPrefix.pch; sourceTree = "<group>"; };
-		68D4CDA71AE76D0E00F4CACF /* ReadMe.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = ReadMe.md; path = SingletonDelegate/ReadMe.md; sourceTree = "<group>"; };
+		68D4CDA81AE76E8200F4CACF /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +74,7 @@
 		68D4CD6A1AE7438D00F4CACF = {
 			isa = PBXGroup;
 			children = (
-				68D4CDA71AE76D0E00F4CACF /* ReadMe.md */,
+				68D4CDA81AE76E8200F4CACF /* README.md */,
 				68D4CD751AE7438E00F4CACF /* SingletonDelegate */,
 				68D4CD8F1AE7438E00F4CACF /* SingletonDelegateTests */,
 				68D4CD741AE7438E00F4CACF /* Products */,
